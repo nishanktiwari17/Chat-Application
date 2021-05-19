@@ -20,15 +20,15 @@ app.use(express.json());
 app.use(Cors());
 
 const pusher = new Pusher({
-    appId: "1200653",
-    key: "743918b70d1a043faf5e",
-    secret: "35b4ead6fcf07da18f09",
-    cluster: "eu",
+    appId: process.env.APPID,
+    key: process.env.KEY,
+    secret: process.env.SECRET,
+    cluster: process.env.CLUSTER,
     useTLS: true
 });
 
 //DB config
-const connection_url="mongodb+srv://nishanktiwari:pJLbBZVVBPwIB9ms@whatsappclone.ft5ka.mongodb.net/whatsappDB?retryWrites=true&w=majority"
+const connection_url=process.env.MONGO_URL
 
 mongoose.connect(connection_url,{
     useCreateIndex: true,

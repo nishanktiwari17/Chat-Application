@@ -6,7 +6,7 @@ import { useStateValue } from "./StateProvider";
 import { actionTypes } from "./reducer";
 
 function Login() {
-    const [{},dispatch] = useStateValue();
+    const [{}, dispatch] = useStateValue();
 
     const signIn = () => {
         auth.signInWithPopup(provider).then(
@@ -21,9 +21,9 @@ function Login() {
     return (
         <div className="login">
            <div className="login_container">
-               <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt=""/> 
+               <img src="https://img.icons8.com/fluency/48/000000/macbook-chat.png" alt=""/> 
                 <div className="login_text">
-                    <h1>Sign in to Whatsapp</h1>
+                    <h1>Sign in to Application</h1>
                 </div>
                 <Button type="submit" onClick={signIn}>Sign in With Google</Button>
            </div>

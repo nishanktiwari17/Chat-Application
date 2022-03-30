@@ -7,9 +7,10 @@ import Login from "./Login"
 import { useStateValue } from './StateProvider';
 
 function App() {
-  const [{user},dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
 
-  // https://whatsapp-clone-f6491.web.app
+  // Project Console: https://console.firebase.google.com/project/chat-application-5137c/overview
+  // Hosting URL: https://chat-application-5137c.web.app
   return (
 
     <div className="app">

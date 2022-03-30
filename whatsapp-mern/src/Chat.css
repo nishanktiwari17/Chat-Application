@@ -14,9 +14,11 @@
 
 .chat_header{
     display: flex;
-    padding: 20px;
+    padding: 10px;
     align-items: center;
     border-bottom: 1px solid lightgray;
+    background-color: #95e286;
+
 }
 
 .chat_headerInfo{
@@ -41,7 +43,7 @@
 
 .chat_body{
     flex: 1;
-    background-image: url('https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png');
+    background-image: url('https://w0.peakpx.com/wallpaper/818/148/HD-wallpaper-whatsapp-background-cool-dark-green-new-theme-whatsapp.jpg');
     background-repeat: repeat;
     background-position: center;
     padding: 30px;
@@ -53,15 +55,16 @@
     font-size: 16px;
     border-radius: 10px;
     padding: 10px;
-    background-color: white;
+    background-color: #f4f4f5;
     width: fit-content;
+    margin-top: 17px;
 }
 
 .chat_name{
     position: absolute;
-    top:-15px;
-    font-weight: 800;
-    font-size: xx-small;
+    top:-11px;
+    font-size:x-small;
+    color: #f4f4f5;
 }
 
 .chat_timestemp{
@@ -71,7 +74,7 @@
 
 .chat_receiver{
     margin-left: auto;
-    background-color: #dcf8c6;
+    background-color: #85d870;
 }
 
 .chat_footer{

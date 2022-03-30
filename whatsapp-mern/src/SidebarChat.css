@@ -25,3 +25,11 @@ a {
     text-decoration: none !important;
     color: black;
 }
+
+.room_heading {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.add-new-chat-title {
+    font-family: 'Times New Roman', Times, serif;
+}

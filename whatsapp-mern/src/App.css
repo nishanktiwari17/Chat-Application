@@ -1,12 +1,13 @@
   *{
     margin: 0;
+    font-family: ' Helveticas', serif;
 }
 
 .app{
     display: grid;
     place-items: center;
     height: 100vh;
-    background-color: #dadbd3;
+    background: #fcfdfb
 }
 
 .app_body{

@@ -15,6 +15,7 @@ function Sidebar(){
     const[{user}, dispatch] = useStateValue();
 
     useEffect(() => {
+        //onSnapShot => For any change in firebase database 
         const unsubscribe = db.collection('rooms').onSnapshot(snapshot => (
             setRooms(snapshot.docs.map((doc) => (
                 {
@@ -34,7 +35,8 @@ function Sidebar(){
     return (
         <div className="sidebar">
             <div className="sidebar_header">
-            <Avatar src={user?.photoURL}/>
+                <Avatar src={user?.photoURL} />
+                <h3 className= "user_name" >{user?.displayName}</h3>
                 <div className="sidebar_headerRight">
                 <IconButton>
                     <DonutLargeIcon />

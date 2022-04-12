@@ -3,11 +3,13 @@ import {Avatar} from "@material-ui/core";
 import './SidebarChat.css';
 import db from './firebase';
 import {Link} from 'react-router-dom';
+import form from './Form.js'
+import DeleteIcon from '@mui/icons-material/Delete';
 
 function SidebarChat({ id, name, addNewChat }) {
     const [seed, setSeed] = useState("");
     const [messages, setMessages] = useState("");
-    
+
     useEffect(() => {
         if(id){
             db.collection('rooms')
@@ -24,6 +26,11 @@ function SidebarChat({ id, name, addNewChat }) {
         setSeed(Math.floor(Math.random() * 5000));        
     }, []);
 
+    const deleteChat = () => {
+        db.collection("rooms").doc(id).delete()
+        //Link to nxt room
+    }
+
     const createChat = () => {
         const roomName = prompt("Please Enter Name for Chat");
 
@@ -35,15 +42,16 @@ function SidebarChat({ id, name, addNewChat }) {
     };
 
     return !addNewChat ? (
-        <Link to={`/rooms/${id}`} key={id}>
-            <div className="sidebarChat">
+            <div className="sidebarChat" >
                 <Avatar src={`https://avatars.dicebear.com/api/human/${seed}.svg`}/>
                 <div className="sidebarChat_info">
+                <Link to={`/rooms/${id}`} key={id} >
                     <h2 className='room_heading'>{name}</h2>
                     <p>{messages[0]?.message}</p>
+                </Link>
                 </div>
+                <DeleteIcon className='delete' onClick = {deleteChat} />
             </div>
-        </Link>
         
     ) : (
         <div onClick={createChat} className="sidebarChat">

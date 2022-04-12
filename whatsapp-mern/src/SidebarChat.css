@@ -33,3 +33,13 @@ a {
 .add-new-chat-title {
     font-family: 'Times New Roman', Times, serif;
 }
+
+.delete {
+    position: absolute;
+    right: 10px;
+    left: 550px;
+}
+
+.delete:hover {
+    cursor: pointer;
+}

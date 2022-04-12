@@ -5,6 +5,7 @@ import DonutLargeIcon from '@material-ui/icons/DonutLarge';
 import { Avatar, IconButton } from "@material-ui/core"
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import SearchIcon from '@material-ui/icons/Search';
+import DeleteIcon from '@mui/icons-material/Delete';
 import SidebarChat from "./SidebarChat"
 import db from './firebase'
 import {useStateValue, StateProvider, StateContext} from './StateProvider'

@@ -5,6 +5,7 @@ You SignIn via Google Authentication.
 The project has been deployed on Firebase.
 The database has also been built on Firebase.
 You can create Chat Rooms have realtime conversations.
-![Chat](https://user-images.githubusercontent.com/65443149/151835789-b16f248d-9b5d-48c9-a46a-0fdf81ff765d.png)
+![WhatsApp Image 2022-03-30 at 3 07 10 AM](https://user-images.githubusercontent.com/65443149/163035190-832407f4-a424-45dd-8c11-0f93c8cd00cf.jpeg)
+
 
 

@@ -12,36 +12,39 @@ import { useStateValue } from './StateProvider'
 function Chat() {
   const [input, setInput] = useState('')
   const [seed, setSeed] = useState('')
-  const { roomId } = useParams()
+  const { roomid } = useParams()
   const [roomName, setRoomName] = useState('')
   const [messages, setMessages] = useState([])
   const [{ user }, dispatch] = useStateValue()
 
   useEffect(() => {
-    if (roomId) {
+    if (roomid) {
+      prompt("Hello")
       db.collection('rooms')
-        .doc(roomId)
+        .doc(roomid)
         .onSnapshot((snapshot) => {
           setRoomName(snapshot.data().name)
         })
 
       db.collection('rooms')
-        .doc(roomId)
+        .doc(roomid)
         .collection('messages')
         .orderBy('timestamp', 'asc')
         .onSnapshot((snapshot) => {
           setMessages(snapshot.docs.map((doc) => doc.data()))
         })
+    } else {
+      prompt("Hy")
     }
-  }, [roomId])
+  }, [roomid])
 
   useEffect(() => {
     setSeed(Math.floor(Math.random() * 5000))
-  }, [roomId])
+  }, [roomid])
 
   const sendMessage = (e) => {
     e.preventDefault()
-    db.collection('rooms').doc(roomId).collection('messages').add({
+    db.collection('rooms').doc(roomid).collection('messages').add({
       message: input,
       name: user.displayName,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
@@ -75,7 +78,6 @@ function Chat() {
           </IconButton>
         </div>
     </div>
-
       <div className="chat_body">
         {messages.map((message) => (
           <p

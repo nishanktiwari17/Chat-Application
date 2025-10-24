@@ -1,4 +1,4 @@
-# Whatsapp-Clone
+# Chat-Application
 A MERN stack implementation of a Messaging System inspired by WhatsApp, where you can connect with your friends.
 You sign in via Google Authentication.
 ![Whatsapp](https://user-images.githubusercontent.com/65443149/151835583-132ccede-2019-4cba-8e21-21fcb5266321.png)
